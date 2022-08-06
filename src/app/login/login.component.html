@@ -1,0 +1,18 @@
+<h1>Faça seu Login!</h1>
+
+<form [formGroup]="formulario">
+    <label>
+        <label>Login: </label>
+        <input formControlName="name" maxlength="25" type="text">
+        <br><br>
+
+        <label>Senha: </label>
+        <input formControlName="password" maxlength="25" type="password">
+        <br>
+        <small *ngIf="successfulLogin">Login realizado com sucesso!</small>
+        <br><br>
+    </label>
+        <button [disabled]="formulario.invalid" (click)="login()">Submit</button>
+</form>
+
+    <a href={{registerRedirect}}>cadastre-se agora em nosso site!</a>

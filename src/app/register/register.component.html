@@ -1,0 +1,17 @@
+<h1>Crie seu Cadastro!:</h1>
+
+<form [formGroup]="formulario">
+    <label>
+        <p>Novo login</p>
+        <input maxlength="25" type="text" formControlName="name">
+        <br>
+        <small *ngIf="!formulario.controls['name'].valid">O usuário deve conter no minimo 4 caracteres.</small>
+
+        <p>Senha</p>
+        <input maxlength="25" type="password" formControlName="password">
+        <br>
+        <small *ngIf="!formulario.controls['password'].valid">A senha deve conter no minimo 8 caracteres.</small>
+    </label>
+        <br>
+        <button [disabled]="formulario.invalid" (click)="createUser()">Submit</button>
+</form>
