@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.loginAuth != null) {
-      console.warn("LOGADO!")
+      console.warn("USUARIO LOGADO!")
     } else {
       console.error("NAO LOGADO")
       location.href = 'login'
